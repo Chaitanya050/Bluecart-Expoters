@@ -73,9 +73,7 @@ function formatDate($date) {
     return date('d M Y, h:i A', strtotime($date));
 }
 
-function isAdmin() {
-    return isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
-}
+
 
 function requireAdmin() {
     if (!isAdmin()) {
